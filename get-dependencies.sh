@@ -45,3 +45,5 @@ git clone --depth 1 https://aur.archlinux.org/touchhle.git ./touchhle
 	ls -la ./
 	pacman --noconfirm -U ./*.pkg.tar.*
 )
+
+pacman -Q touchhle | awk '{print $2; exit}' > ~/version
