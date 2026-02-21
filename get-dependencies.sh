@@ -10,6 +10,7 @@ pacman -Syu --noconfirm \
 	android-tools \
 	cargo		  \
 	libdecor	  \
+	openal		  \
 	rust		  \
 	sdl2
 
