@@ -33,7 +33,7 @@ echo "$VERSION" > ~/version
 
 mkdir -p ./AppDir/bin
 cd ./touchHLE
-patch -Np1 -i ./touchHLE_cargo_system_sdl2.patch
+patch -Np1 -i ../touchHLE_cargo_system_sdl2.patch
 rustup default stable
 export CMAKE_CONFIGURE_FLAGS="-DCMAKE_POLICY_VERSION_MINIMUM=3.5 -DCMAKE_BUILD_TYPE=Release"
 cargo build --release --all-features
