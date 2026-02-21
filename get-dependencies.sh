@@ -13,8 +13,6 @@ pacman -Syu --noconfirm \
 	libx11            \
 	libxrandr         \
 	libxss            \
-	pulseaudio        \
-	pulseaudio-alsa   \
 	rust			  \
 	xorg-server-xvfb  \
 	zsync
