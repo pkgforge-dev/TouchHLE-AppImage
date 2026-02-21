@@ -24,7 +24,7 @@ get-debloated-pkgs --add-common --prefer-nano opus-mini
 # If the application needs to be manually built that has to be done down here
 echo "Making nightly build of touchHLE..."
 echo "---------------------------------------------------------------"
-REPO="https://github.com/UnknownShadow200/ClassiCube"
+REPO="https://github.com/touchHLE/touchHLE"
 VERSION=$(git ls-remote --tags --sort='v:refname' "$REPO" | tail -n1 | cut -d/ -f3)
 git clone --branch "$VERSION" --single-branch --recursive --depth 1 "$REPO" ./touchHLE
 echo "$VERSION" > ~/version
