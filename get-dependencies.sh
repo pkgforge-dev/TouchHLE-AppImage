@@ -7,16 +7,17 @@ ARCH=$(uname -m)
 echo "Installing package dependencies..."
 echo "---------------------------------------------------------------"
 pacman -Syu --noconfirm \
-	android-tools \
-	cargo		  \
-	libdecor	  \
-	openal		  \
-	rust		  \
-	sdl2
+	android-tools  \
+	cargo		   \
+	libdecor	   \
+	openal		   \
+	rustup		   \
+	sdl2		   \
+	ttf-liberation
 
 echo "Installing debloated packages..."
 echo "---------------------------------------------------------------"
-get-debloated-pkgs --add-common --prefer-nano opus-mini
+get-debloated-pkgs --add-common --prefer-nano ! llvm
 
 # Comment this out if you need an AUR package
 #make-aur-package PACKAGENAME
@@ -31,6 +32,7 @@ echo "$VERSION" > ~/version
 
 mkdir -p ./AppDir/bin
 cd ./touchHLE
+rustup update
 cargo build --release --all-features
 mv -v target/release/touchHLE ../AppDir/bin
 mv -v touchHLE_default_options.txt ../AppDir/bin
