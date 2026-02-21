@@ -34,7 +34,7 @@ echo "$VERSION" > ~/version
 mkdir -p ./AppDir/bin
 cd ./touchHLE
 rustup default stable
-export CMAKE_CONFIGURE_FLAGS="-DCMAKE_POLICY_VERSION_MINIMUM=3.5"
+export CMAKE_CONFIGURE_FLAGS="-DCMAKE_POLICY_VERSION_MINIMUM=3.5 -DCMAKE_BUILD_TYPE=Release"
 cargo build --release --all-features
 mv -v target/release/touchHLE ../AppDir/bin
 mv -v touchHLE_default_options.txt ../AppDir/bin
