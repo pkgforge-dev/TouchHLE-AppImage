@@ -25,7 +25,7 @@ get-debloated-pkgs --add-common --prefer-nano opus-mini
 echo "Making nightly build of touchHLE..."
 echo "---------------------------------------------------------------"
 REPO="https://github.com/touchHLE/touchHLE"
-VERSION=$(git ls-remote --tags --sort='v:refname' "$REPO" | tail -n1 | cut -d/ -f3)
+VERSION=$(git ls-remote --tags --refs --sort='v:refname' "$REPO" | tail -n1 | cut -d/ -f3)
 git clone --branch "$VERSION" --single-branch --recursive --depth 1 "$REPO" ./touchHLE
 echo "$VERSION" > ~/version
 
