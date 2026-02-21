@@ -14,8 +14,8 @@ index eeb5a60..838eb3e 100644
 -# SDL2 that rust-sdl2 uses, so that the Android JNI interface matches.
 -sdl2 = { git = "https://github.com/touchHLE/rust-sdl2", tag = "touchHLE-3", features = ["hidapi"] }
 -sdl2-sys = { git = "https://github.com/touchHLE/rust-sdl2", tag = "touchHLE-3" }
-+sdl2 = { version = "0.35.2", features = ["use-pkgconfig", "hidapi"] }
-+sdl2-sys = { version = "0.35.2", features = ["use-pkgconfig"] }
++sdl2 = { version = "0.38.0", features = ["use-pkgconfig", "hidapi"] }
++sdl2-sys = { version = "0.38.0", features = ["use-pkgconfig"] }
  touchHLE_dynarmic_wrapper = { path = "src/cpu/dynarmic_wrapper" }
  touchHLE_gl_bindings = { path = "src/gles/gl_bindings" }
  touchHLE_openal_soft_wrapper = { path = "src/audio/openal_soft_wrapper" }
