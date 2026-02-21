@@ -8,15 +8,14 @@ echo "Installing package dependencies..."
 echo "---------------------------------------------------------------"
 pacman -Syu --noconfirm \
 	android-tools     \
-	base-devel        \
+	cargo			  \
 	curl              \
-	git               \
 	libx11            \
 	libxrandr         \
 	libxss            \
 	pulseaudio        \
 	pulseaudio-alsa   \
-	wget              \
+	rust			  \
 	xorg-server-xvfb  \
 	zsync
 
@@ -31,7 +30,12 @@ get-debloated-pkgs --add-common --prefer-nano opus-mini
 echo "Making nightly build of touchHLE..."
 echo "---------------------------------------------------------------"
 REPO="https://github.com/UnknownShadow200/ClassiCube"
-VERSION="$(git ls-remote "$REPO" HEAD | cut -c 1-9 | head -1)"
-git clone "$REPO" ./touchHLE
+VERSION=$(git ls-remote --tags --sort='v:refname' "$REPO" | tail -n1 | cut -d/ -f3)
+git clone --branch "$VERSION" --single-branch --recursive --depth 1 "$REPO" ./touchHLE
 echo "$VERSION" > ~/version
 
+mkdir -p ./AppDir/bin
+cd ./touchHLE
+cargo build --frozen --release --all-features
+mv -v target/release/touchHLE ../AppDir/bin
+mv -v touchHLE}_default_options.txt ../AppDir/bin
