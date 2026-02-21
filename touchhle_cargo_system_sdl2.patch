@@ -1,7 +1,7 @@
-diff --git a/Cargo.toml b/Cargop.toml
+diff --git a/Cargo.toml b/Cargo.toml
 index eeb5a60..838eb3e 100644
 --- a/Cargo.toml
-+++ b/Cargop.toml
++++ b/Cargo.toml
 @@ -54,14 +54,8 @@ quick-xml = "0.38.4"
  md5 = "0.7.0"
  yore = "1.1.0"
@@ -20,10 +20,10 @@ index eeb5a60..838eb3e 100644
  touchHLE_gl_bindings = { path = "src/gles/gl_bindings" }
  touchHLE_openal_soft_wrapper = { path = "src/audio/openal_soft_wrapper" }
 
-diff --git a/Cargo.lock b/Cargop.lock
+diff --git a/Cargo.lock b/Cargo.lock
 index 05b7d2a..7ab2543 100644
 --- a/Cargo.lock
-+++ b/Cargop.lock
++++ b/Cargo.lock
 @@ -462,6 +462,12 @@ dependencies = [
   "ttf-parser",
  ]
