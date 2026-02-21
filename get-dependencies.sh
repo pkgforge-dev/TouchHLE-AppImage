@@ -7,7 +7,7 @@ ARCH=$(uname -m)
 echo "Installing package dependencies..."
 echo "---------------------------------------------------------------"
 pacman -Syu --noconfirm \
-	android-tools  \
+	boost		   \
 	cargo		   \
 	libdecor	   \
 	openal		   \
