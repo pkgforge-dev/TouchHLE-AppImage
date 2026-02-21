@@ -32,7 +32,7 @@ echo "$VERSION" > ~/version
 
 mkdir -p ./AppDir/bin
 cd ./touchHLE
-rustup update
+rustup default stable
 cargo build --release --all-features
 mv -v target/release/touchHLE ../AppDir/bin
 mv -v touchHLE_default_options.txt ../AppDir/bin
