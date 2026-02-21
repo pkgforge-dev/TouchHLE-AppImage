@@ -7,7 +7,7 @@
 [![Latest Stable Release](https://img.shields.io/github/v/release/pkgforge-dev/TouchHLE-AppImage)](https://github.com/pkgforge-dev/TouchHLE-AppImage/releases/latest)
 
 <p align="center">
-  <img src="https://github.com/touchHLE.png" width="128" />
+  <img src="https://github.com/touchHLE/touchHLE/blob/trunk/res/icon.png" width="128" />
 </p>
 
 
