@@ -7,15 +7,11 @@ ARCH=$(uname -m)
 echo "Installing package dependencies..."
 echo "---------------------------------------------------------------"
 pacman -Syu --noconfirm \
-	android-tools     \
-	cargo			  \
-	curl              \
-	libx11            \
-	libxrandr         \
-	libxss            \
-	rust			  \
-	xorg-server-xvfb  \
-	zsync
+	android-tools \
+	cargo		  \
+	libdecor	  \
+	rust		  \
+	sdl2
 
 echo "Installing debloated packages..."
 echo "---------------------------------------------------------------"
