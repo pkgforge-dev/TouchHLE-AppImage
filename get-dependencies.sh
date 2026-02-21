@@ -38,4 +38,4 @@ mkdir -p ./AppDir/bin
 cd ./touchHLE
 cargo build --release --all-features
 mv -v target/release/touchHLE ../AppDir/bin
-mv -v touchHLE}_default_options.txt ../AppDir/bin
+mv -v touchHLE_default_options.txt ../AppDir/bin
