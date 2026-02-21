@@ -2,10 +2,9 @@
 
 set -eu
 
-EXTRA_PACKAGES="https://raw.githubusercontent.com/pkgforge-dev/Anylinux-AppImages/refs/heads/main/useful-tools/get-debloated-pkgs.sh"
-PACKAGE_BUILDER="https://raw.githubusercontent.com/pkgforge-dev/Anylinux-AppImages/refs/heads/main/useful-tools/make-aur-package.sh"
+ARCH=$(uname -m)
 
-echo "Installing build dependencies..."
+echo "Installing package dependencies..."
 echo "---------------------------------------------------------------"
 pacman -Syu --noconfirm \
 	android-tools     \
@@ -23,14 +22,16 @@ pacman -Syu --noconfirm \
 
 echo "Installing debloated packages..."
 echo "---------------------------------------------------------------"
-wget --retry-connrefused --tries=30 "$EXTRA_PACKAGES" -O ./get-debloated-pkgs.sh
-chmod +x ./get-debloated-pkgs.sh
-./get-debloated-pkgs.sh --add-opengl --prefer-nano opus-mini
+get-debloated-pkgs --add-common --prefer-nano opus-mini
 
-echo "Building touchhle..."
+# Comment this out if you need an AUR package
+#make-aur-package PACKAGENAME
+
+# If the application needs to be manually built that has to be done down here
+echo "Making nightly build of touchHLE..."
 echo "---------------------------------------------------------------"
-wget --retry-connrefused --tries=30 "$PACKAGE_BUILDER" -O ./make-aur-package.sh
-chmod +x ./make-aur-package.sh
-./make-aur-package.sh touchhle
+REPO="https://github.com/UnknownShadow200/ClassiCube"
+VERSION="$(git ls-remote "$REPO" HEAD | cut -c 1-9 | head -1)"
+git clone "$REPO" ./touchHLE
+echo "$VERSION" > ~/version
 
-pacman -Q touchhle | awk '{print $2; exit}' > ~/version
