@@ -9,6 +9,7 @@ echo "---------------------------------------------------------------"
 pacman -Syu --noconfirm \
 	boost		   \
 	cargo		   \
+	cmake		   \
 	libdecor	   \
 	openal		   \
 	rustup		   \
