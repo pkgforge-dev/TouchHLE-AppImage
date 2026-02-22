@@ -63,3 +63,4 @@ find touchHLE_fonts -maxdepth 1 -type f \( -name "LICENSE.*" -o -name "README.md
 #rm -f README.md
 #cd ..
 mv -v touchHLE_fonts ../AppDir/bin
+mv -v touchHLE_dylibs ../AppDir/bin
