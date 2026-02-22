@@ -3,5 +3,5 @@ Type=Application
 Name=touchHLE
 Icon=icon
 Exec=touchHLE
-Categories=Game;Emulation
+Categories=Game;Emulator
 StartupWMClass=
