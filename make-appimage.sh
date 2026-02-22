@@ -7,7 +7,7 @@ export ARCH
 export OUTPATH=./dist
 export ADD_HOOKS="self-updater.bg.hook"
 export UPINFO="gh-releases-zsync|${GITHUB_REPOSITORY%/*}|${GITHUB_REPOSITORY#*/}|latest|*$ARCH.AppImage.zsync"
-export ICON=PATH_OR_URL_TO_ICON
+export ICON=https://raw.githubusercontent.com/touchHLE/touchHLE/refs/heads/trunk/res/icon.png
 export DESKTOP=PATH_OR_URL_TO_DESKTOP_ENTRY
 export DEPLOY_OPENGL=1
 
