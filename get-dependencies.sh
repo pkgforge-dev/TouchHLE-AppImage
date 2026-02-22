@@ -53,6 +53,6 @@ EOF
 chmod +x ./cmake_wrapper
 export CMAKE="$(pwd)/cmake_wrapper"
 export SDL2_CONFIG_PATH=/usr/bin/sdl2-config
-cargo build --release --no-default-features --features="all"
+cargo build --release --no-default-features --features="full"
 mv -v target/release/touchHLE ../AppDir/bin
 mv -v touchHLE_default_options.txt ../AppDir/bin
