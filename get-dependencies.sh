@@ -57,10 +57,6 @@ cargo build --release --no-default-features
 mv -v target/release/touchHLE ../AppDir/bin
 mv -v touchHLE_default_options.txt ../AppDir/bin/options.txt
 find touchHLE_fonts -maxdepth 1 -type f \( -name "LICENSE.*" -o -name "README.md" \) -delete
-#cd touchHLE_fonts
-#rm -f LICENSE.liberation
-#rm -f LICENSE.noto
-#rm -f README.md
-#cd ..
+find touchHLE_dylibs -maxdepth 1 -type f \( -name "COPYING.*" -o -name "README.md" \) -delete
 mv -v touchHLE_fonts ../AppDir/bin
 mv -v touchHLE_dylibs ../AppDir/bin
