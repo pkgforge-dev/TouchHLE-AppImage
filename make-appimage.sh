@@ -14,10 +14,10 @@ export DEPLOY_OPENGL=1
 quick-sharun ./AppDir/bin/touchHLE #/usr/share/touchhle
 
 # Additional changes can be done in between here
-mkdir -p ./AppDir/share/fonts/liberation
-cp -v /usr/share/fonts/liberation/LiberationSans-Bold.ttf ./AppDir/share/fonts/liberation
-cp -v /usr/share/fonts/liberation/LiberationSans-Italic.ttf ./AppDir/share/fonts/liberation
-cp -v /usr/share/fonts/liberation/LiberationSans-Regular.ttf ./AppDir/share/fonts/liberation
+mkdir -p ./AppDir/bin/touchHLE_fonts
+cp -v /usr/share/fonts/liberation/LiberationSans-Bold.ttf ./AppDir/bin/touchHLE_fonts
+cp -v /usr/share/fonts/liberation/LiberationSans-Italic.ttf /AppDir/bin/touchHLE_fonts
+cp -v /usr/share/fonts/liberation/LiberationSans-Regular.ttf /AppDir/bin/touchHLE_fonts
 
 # Turn AppDir into AppImage
 quick-sharun --make-appimage
