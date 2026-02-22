@@ -16,10 +16,6 @@ export DEPLOY_PULSE=1
 quick-sharun /usr/bin/touchHLE /usr/share/touchhle
 
 # Additional changes can be done in between here
-mkdir -p ./dist
-mv -v ./*.AppImage* ./dist
-mv -v ~/version     ./dist
-
 
 # Turn AppDir into AppImage
 quick-sharun --make-appimage
