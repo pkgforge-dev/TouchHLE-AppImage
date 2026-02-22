@@ -34,7 +34,7 @@ echo "$VERSION" > ~/version
 mkdir -p ./AppDir/bin
 cd ./touchHLE
 patch -Np1 -i ../touchhle_cargo_system_sdl2.patch
-#rustup default stable
+rustup default stable
 #cat << 'EOF' > ./cmake_wrapper
 ##!/bin/sh
 #/usr/bin/cmake -DCMAKE_POLICY_VERSION_MINIMUM=3.5 "$@"
