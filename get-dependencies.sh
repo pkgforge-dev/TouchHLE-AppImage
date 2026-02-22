@@ -35,7 +35,13 @@ mkdir -p ./AppDir/bin
 cd ./touchHLE
 patch -Np1 -i ../touchhle_cargo_system_sdl2.patch
 rustup default stable
-export CMAKE_CONFIGURE_FLAGS="-DCMAKE_POLICY_VERSION_MINIMUM=3.5 -DCMAKE_BUILD_TYPE=Release"
+cat << 'EOF' > ./cmake_wrapper
+#!/bin/sh
+# This script injects the compatibility flag into every cmake call
+/usr/bin/cmake -DCMAKE_POLICY_VERSION_MINIMUM=3.5 "$@"
+EOF
+chmod +x ./cmake_wrapper
+export CMAKE="$(pwd)/cmake_wrapper"
 cargo build --release --all-features
 mv -v target/release/touchHLE ../AppDir/bin
 mv -v touchHLE_default_options.txt ../AppDir/bin
