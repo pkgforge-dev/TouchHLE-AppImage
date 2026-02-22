@@ -12,6 +12,7 @@ export DEPLOY_OPENGL=1
 
 # Deploy dependencies
 quick-sharun ./AppDir/bin/touchHLE #/usr/share/touchhle
+echo 'SHARUN_WORKING_DIR=${SHARUN_DIR}/bin' >> ./AppDir/.env
 
 # Additional changes can be done in between here
 #mkdir -p ./AppDir/bin/touchHLE_fonts
