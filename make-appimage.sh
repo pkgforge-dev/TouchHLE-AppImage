@@ -10,7 +10,6 @@ export UPINFO="gh-releases-zsync|${GITHUB_REPOSITORY%/*}|${GITHUB_REPOSITORY#*/}
 export ICON=PATH_OR_URL_TO_ICON
 export DESKTOP=PATH_OR_URL_TO_DESKTOP_ENTRY
 export DEPLOY_OPENGL=1
-export DEPLOY_PULSE=1
 
 # Deploy dependencies
 quick-sharun /usr/bin/touchHLE /usr/share/touchhle
