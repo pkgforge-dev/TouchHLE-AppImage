@@ -34,14 +34,25 @@ echo "$VERSION" > ~/version
 mkdir -p ./AppDir/bin
 cd ./touchHLE
 patch -Np1 -i ../touchhle_cargo_system_sdl2.patch
-rustup default stable
+#rustup default stable
+#cat << 'EOF' > ./cmake_wrapper
+##!/bin/sh
+#/usr/bin/cmake -DCMAKE_POLICY_VERSION_MINIMUM=3.5 "$@"
+#EOF
+#chmod +x ./cmake_wrapper
+#export CMAKE="$(pwd)/cmake_wrapper"
+#cargo build --release --all-features
 cat << 'EOF' > ./cmake_wrapper
 #!/bin/sh
-# This script injects the compatibility flag into every cmake call
-/usr/bin/cmake -DCMAKE_POLICY_VERSION_MINIMUM=3.5 "$@"
+if [ "$1" = "--build" ]; then
+    /usr/bin/cmake "$@"
+else
+    /usr/bin/cmake -DCMAKE_POLICY_VERSION_MINIMUM=3.5 "$@"
+fi
 EOF
 chmod +x ./cmake_wrapper
 export CMAKE="$(pwd)/cmake_wrapper"
-cargo build --release --all-features
+export SDL2_CONFIG_PATH=/usr/bin/sdl2-config
+cargo build --release --no-default-features --features="all"
 mv -v target/release/touchHLE ../AppDir/bin
 mv -v touchHLE_default_options.txt ../AppDir/bin
