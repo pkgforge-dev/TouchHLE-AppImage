@@ -12,7 +12,7 @@ export DESKTOP=PATH_OR_URL_TO_DESKTOP_ENTRY
 export DEPLOY_OPENGL=1
 
 # Deploy dependencies
-quick-sharun /usr/bin/touchHLE /usr/share/touchhle
+quick-sharun ./AppDir/bin/touchHLE /usr/share/touchhle
 
 # Additional changes can be done in between here
 
