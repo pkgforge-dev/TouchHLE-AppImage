@@ -13,8 +13,8 @@ pacman -Syu --noconfirm \
 	libdecor	   \
 	openal		   \
 	rustup		   \
-	sdl2		   \
-	ttf-liberation
+	sdl2
+	#ttf-liberation
 
 echo "Installing debloated packages..."
 echo "---------------------------------------------------------------"
