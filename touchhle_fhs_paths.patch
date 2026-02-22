@@ -5,15 +5,15 @@
  /// Name of the directory containing ARMv6 dynamic libraries bundled with
  /// touchHLE.
 -pub const DYLIBS_DIR: &str = "touchHLE_dylibs";
-+pub const DYLIBS_DIR: &str = "./local/share/touchhle/touchHLE_dylibs";
++pub const DYLIBS_DIR: &str = "~/.local/share/touchhle/touchHLE_dylibs";
  
  /// Name of the directory containing fonts bundled with touchHLE.
 -pub const FONTS_DIR: &str = "touchHLE_fonts";
-+pub const FONTS_DIR: &str = "./local/share/touchhle/touchHLE_fonts";
++pub const FONTS_DIR: &str = "~/.local/share/touchhle/touchHLE_fonts";
  
  /// Name of the file containing touchHLE's default options for various apps.
 -pub const DEFAULT_OPTIONS_FILE: &str = "touchHLE_default_options.txt";
-+pub const DEFAULT_OPTIONS_FILE: &str = "./local/share/touchhle/options.txt";
++pub const DEFAULT_OPTIONS_FILE: &str = "~/.local/share/touchhle/options.txt";
  
  /// Abstraction over a platform-specific type for accessing a resource bundled
  /// with touchHLE.
