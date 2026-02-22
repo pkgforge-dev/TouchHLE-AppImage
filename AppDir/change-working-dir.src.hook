@@ -1,3 +1,0 @@
-dir=${XDG_DATA_HOME:-~/.local/share}/touchhle
-mkdir -p "$dir"/touchHLE_apps
-cd "$dir"
