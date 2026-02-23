@@ -34,7 +34,7 @@ echo "$VERSION" > ~/version
 mkdir -p ./AppDir/bin
 cd ./touchHLE
 patch -Np1 -i ../touchhle_cargo_system_sdl2.patch
-patch -Np1 -i ../touchhle_fhs_paths.patch
+#patch -Np1 -i ../touchhle_fhs_paths.patch
 rustup default stable
 #cat << 'EOF' > ./cmake_wrapper
 ##!/bin/sh
