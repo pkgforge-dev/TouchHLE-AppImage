@@ -14,7 +14,6 @@ pacman -Syu --noconfirm \
 	openal		   \
 	rustup		   \
 	sdl2
-	#ttf-liberation
 
 echo "Installing debloated packages..."
 echo "---------------------------------------------------------------"
@@ -34,15 +33,7 @@ echo "$VERSION" > ~/version
 mkdir -p ./AppDir/bin
 cd ./touchHLE
 patch -Np1 -i ../touchhle_cargo_system_sdl2.patch
-#patch -Np1 -i ../touchhle_fhs_paths.patch
 rustup default stable
-#cat << 'EOF' > ./cmake_wrapper
-##!/bin/sh
-#/usr/bin/cmake -DCMAKE_POLICY_VERSION_MINIMUM=3.5 "$@"
-#EOF
-#chmod +x ./cmake_wrapper
-#export CMAKE="$(pwd)/cmake_wrapper"
-#cargo build --release --all-features
 cat << 'EOF' > ./cmake_wrapper
 #!/bin/sh
 if [ "$1" = "--build" ]; then
