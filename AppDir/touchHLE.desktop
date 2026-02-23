@@ -4,4 +4,4 @@ Name=touchHLE
 Icon=icon
 Exec=touchHLE
 Categories=Game;Emulator
-StartupWMClass=
+StartupWMClass=touchHLE
