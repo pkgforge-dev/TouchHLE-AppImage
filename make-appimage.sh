@@ -11,7 +11,7 @@ export ICON=https://raw.githubusercontent.com/touchHLE/touchHLE/refs/heads/trunk
 export DEPLOY_OPENGL=1
 
 # Deploy dependencies
-quick-sharun ./AppDir/bin/touchHLE #/usr/share/touchhle
+quick-sharun ./AppDir/bin/touchHLE
 
 # Additional changes can be done in between here
 
