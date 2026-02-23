@@ -1,7 +1,7 @@
 dir=${XDG_DATA_HOME:-~/.local/share}/touchhle
 mkdir -p "$dir/touchHLE_apps"
 if [ ! -f "dir"/options.txt ]; then
-  cp -r "$APPDIR"/bin/options.txt "$dir"
+  cp "$APPDIR"/bin/options.txt "$dir"
   cp -r "$APPDIR"/bin/touchHLE_fonts "$dir"
   cp -r "$APPDIR"/bin/touchHLE_dylibs "$dir"
 fi
