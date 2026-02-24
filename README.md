@@ -2,9 +2,9 @@
 
 # touchHLE-AppImage 🐧
 
-[![GitHub Downloads](https://img.shields.io/github/downloads/Link4Electronics/TouchHLE-AppImage/total?logo=github&label=GitHub%20Downloads)](https://github.com/Link4Electronics/TouchHLE-AppImage/releases/latest)
-[![CI Build Status](https://github.com//Link4Electronics/TouchHLE-AppImage/actions/workflows/appimage.yml/badge.svg)](https://github.com/Link4Electronics/TouchHLE-AppImage/releases/latest)
-[![Latest Stable Release](https://img.shields.io/github/v/release/Link4Electronics/TouchHLE-AppImage)](https://github.com/Link4Electronics/TouchHLE-AppImage/releases/latest)
+[![GitHub Downloads](https://img.shields.io/github/downloads/pkgforge-dev/TouchHLE-AppImage/total?logo=github&label=GitHub%20Downloads)](https://github.com/pkgforge-dev/TouchHLE-AppImage/releases/latest)
+[![CI Build Status](https://github.com//pkgforge-dev/TouchHLE-AppImage/actions/workflows/appimage.yml/badge.svg)](https://github.com/pkgforge-dev/TouchHLE-AppImage/releases/latest)
+[![Latest Stable Release](https://img.shields.io/github/v/release/pkgforge-dev/TouchHLE-AppImage)](https://github.com/pkgforge-dev/TouchHLE-AppImage/releases/latest)
 
 <p align="center">
   <img src="https://github.com/touchHLE/touchHLE/blob/trunk/res/icon.png" width="128" />
@@ -13,7 +13,7 @@
 
 | Latest Stable Release | Upstream URL |
 | :---: | :---: |
-| [Click here](https://github.com/Link4Electronics/TouchHLE-AppImage/releases/latest) | [Click here](https://github.com/touchHLE/touchHLE) |
+| [Click here](https://github.com/pkgforge-dev/TouchHLE-AppImage/releases/latest) | [Click here](https://github.com/touchHLE/touchHLE) |
 
 </div>
 
