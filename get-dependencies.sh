@@ -7,17 +7,16 @@ ARCH=$(uname -m)
 echo "Installing package dependencies..."
 echo "---------------------------------------------------------------"
 pacman -Syu --noconfirm \
-	boost	 \
-	cargo	 \
-	cmake	 \
-	libdecor \
-	openal   \
-	rustup	 \
+	boost  \
+	cargo  \
+	cmake  \
+	openal \
+	rustup \
 	sdl2
 
 echo "Installing debloated packages..."
 echo "---------------------------------------------------------------"
-get-debloated-pkgs --add-common --prefer-nano ! llvm
+get-debloated-pkgs --add-common --prefer-nano libdecor-mini ! llvm
 
 echo "Making stable build of touchHLE..."
 echo "---------------------------------------------------------------"
