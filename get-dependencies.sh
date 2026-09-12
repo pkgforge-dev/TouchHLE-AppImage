@@ -6,13 +6,7 @@ ARCH=$(uname -m)
 
 echo "Installing package dependencies..."
 echo "---------------------------------------------------------------"
-pacman -Syu --noconfirm \
-	boost  \
-	cargo  \
-	cmake  \
-	openal \
-	rustup \
-	sdl2
+pacman -Syu --noconfirm boost cargo cmake openal rustup sdl2-compat
 
 echo "Installing debloated packages..."
 echo "---------------------------------------------------------------"
