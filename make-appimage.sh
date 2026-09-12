@@ -11,7 +11,7 @@ export ICON=https://raw.githubusercontent.com/touchHLE/touchHLE/refs/heads/trunk
 export DEPLOY_OPENGL=1
 
 # Deploy dependencies
-quick-sharun ./AppDir/bin/touchHLE
+quick-sharun ./AppDir/bin/touchHLE /usr/lib/libopenal.so*
 
 # Turn AppDir into AppImage
 quick-sharun --make-appimage
